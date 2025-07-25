@@ -1,5 +1,7 @@
 # debian-termux
 
+TUTORIAL BY FLASHER (Fendi)
+
 This repository is a tutorial how to install a debian on termux with proot-distro (No Root needed)
 
 # installing Termux
