@@ -4,7 +4,7 @@ TUTORIAL BY [@Flasherxgapple](https://github.com/Flasherxgapple) (Fendi)
 
 This repository is a tutorial how to install a debian on termux with proot-distro (No Root needed)
 
-![screenshot debian on termux with xfce4](/debian-termux.png)
+![screenshot debian on termux with xfce4](/debian-termux.jpg)
 
 # installing Termux
 
