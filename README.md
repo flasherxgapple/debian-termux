@@ -1,8 +1,10 @@
 # debian-termux
 
-TUTORIAL BY FLASHER (Fendi)
+TUTORIAL BY [@Flasherxgapple](https://github.com/Flasherxgapple) (Fendi)
 
 This repository is a tutorial how to install a debian on termux with proot-distro (No Root needed)
+
+![screenshot debian on termux with xfce4](/debian-termux.png)
 
 # installing Termux
 
@@ -17,21 +19,11 @@ https://github.com/termux/termux-x11/releases/tag/nightly
 
 # setup on termux
 
-- First update your termux
+- This step will update your termux, install x11 repository, and install needed packages
 
 ```
 pkg update && pkg upgrade
-```
-
-- Then install x11 repo
-
-```
 pkg install x11-repo
-```
-
-- After all of that, Install some needed packages
-
-```
 pkg install termux-x11-nightly pulseaudio proot-distro git wget
 ```
 
@@ -41,9 +33,9 @@ pkg install termux-x11-nightly pulseaudio proot-distro git wget
 ```
 pd install debian
 ```
-Note: you can install other distro but in this tutorial i gonna use debian because that's the point
+Note: you can install other distro but in this tutorial im gonna use debian because that's the point
 
-- after debian was succesfuly installed you can login into it as root
+- after debian was succesfuly installed you can login into it as root user
 ```
 pd login debian
 ```
@@ -89,6 +81,18 @@ apt install xfce4 xce4-terminal
 
 ```
 apt install firefox
+```
+
+- Install onboard an on screen virtual keyboard (optional)
+
+```
+apt install onboard
+```
+
+- after finishing debian setup you can exit
+
+```
+exit
 ```
 
 # last step installing the script
