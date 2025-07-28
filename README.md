@@ -77,7 +77,7 @@ user ALL(ALL:ALL) ALL
 - Then install Desktop Environment,  i use xfce4 this time
 Note: this also need stable conectivity
 ```
-apt install xfce4 xce4-terminal
+apt install xfce4 xfce4-terminal
 ```
 
 - If you want to install a web browser (optional)
