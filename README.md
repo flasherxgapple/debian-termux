@@ -90,6 +90,12 @@ apt install firefox
 apt install onboard
 ```
 
+- Install geany a IDE you can use for coding (optional)
+
+```
+apt install geany
+```
+
 - after finishing debian setup you can exit
 
 ```
