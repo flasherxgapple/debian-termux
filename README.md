@@ -7,6 +7,17 @@ This repository is a tutorial how to install a debian on termux with proot-distr
 ![screenshot debian on termux with xfce4](/debian-termux.jpg)
 My debian with custom setup on termux with terminal and onboard opened
 
+# Script (automation)
+First setup you termux with tis script (i reccomend to use fresh install termux to prevent error
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/termux-setup.sh)"
+```
+If the first scripts running correctly you should be inside debian's environment, if yes then run this
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian-setup.sh)"
+```
+
+# Manual If script didnt work
 # installing Termux
 
 First download termux from fdroid. or you can get one from this link
