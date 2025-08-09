@@ -24,7 +24,6 @@ echo "------------------------------------------------------------------"
 echo "WARNING: There is a second script that must be run inside the"
 echo "Debian shell after this installation completes."
 echo "------------------------------------------------------------------"
-read -p "Press Enter to continue..."
 
 echo "Installing Debian..."
 proot-distro install debian
