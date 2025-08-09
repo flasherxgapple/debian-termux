@@ -3,7 +3,6 @@
 set -e
 
 echo "Debian setup for debian-termux by Flasher"
-read -p "Press Enter to continue..."
 
 # ------------------------------------------------------------------
 # This script automates the setup of a Debian environment for Termux.
