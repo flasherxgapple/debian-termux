@@ -3,7 +3,6 @@
 set -e
 
 echo "Termux setup for debian-termux by Flasher"
-read -p "Press Enter to continue..."
 
 echo "Updating and upgrading packages..."
 pkg update && pkg upgrade -y
