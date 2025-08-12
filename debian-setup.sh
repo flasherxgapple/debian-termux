@@ -1,12 +1,7 @@
 #!/bin/bash
-# Exit immediately if a command exits with a non-zero status.
 set -e
 
 echo "Debian setup for debian-termux by Flasher"
-
-# ------------------------------------------------------------------
-# This script automates the setup of a Debian environment for Termux.
-# ------------------------------------------------------------------
 
 echo ">>> Updating and upgrading Debian packages..."
 echo "This may take a while. Please ensure you have a stable internet connection."
@@ -22,30 +17,35 @@ echo "You can leave the other fields (Full Name, etc.) blank by pressing Enter."
 adduser user
 
 echo ">>> Granting root access to the new user..."
-# Create a new sudoers file for the user, which is safer than editing /etc/sudoers directly.
 echo 'user ALL=(ALL:ALL) ALL' >/etc/sudoers.d/user
 chmod 0440 /etc/sudoers.d/user
 echo "User 'user' has been granted sudo privileges."
 
-echo ">>> Installing XFCE4 Desktop Environment and Terminal..."
-echo "This will also take some time and requires a stable internet connection."
-apt install -y xfce4 xfce4-terminal
+read -p "Do you want to install the graphical desktop environment (XFCE4, Firefox, Onboard, Geany)? (y/n): " choice
+echo
+if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
+  echo ">>> Installing XFCE4 Desktop Environment and Terminal..."
+  echo "This will also take some time and requires a stable internet connection."
+  apt install -y xfce4 xfce4-terminal
 
-echo ">>> Installing optional packages..."
+  echo ">>> Installing optional packages..."
 
-# Install Firefox web browser
-echo "Installing Firefox..."
-apt install -y firefox-esr
+  # Install Firefox web browser
+  echo "Installing Firefox..."
+  apt install -y firefox-esr
 
-# Install Onboard (on-screen keyboard)
-echo "Installing Onboard..."
-apt install -y onboard
+  # Install Onboard (on-screen keyboard)
+  echo "Installing Onboard..."
+  apt install -y onboard
 
-# Install Geany (IDE)
-echo "Installing Geany..."
-apt install -y geany
+  # Install Geany (IDE)
+  echo "Installing Geany..."
+  apt install -y geany
+else
+  echo "Skipping graphical desktop environment installation."
+fi
 
 echo "-----------------------------------------------------------------------------------------"
-echo ">>> Debian setup is complete!. you can run xfce4 from script in termux home directory"
+echo ">>> Debian setup is complete!."
 echo "You can now exit the Debian shell by typing 'exit'."
 echo "-----------------------------------------------------------------------------------------"

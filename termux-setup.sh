@@ -1,8 +1,13 @@
 #!/bin/bash
-# Exit immediately if a command exits with a non-zero status.
 set -e
 
 echo "Termux setup for debian-termux by Flasher"
+
+read -p "Do you want to continue with the setup? (y/n): " choice
+if [[ "$choice" != "y" && "$choice" != "Y" ]]; then
+  echo "Setup aborted by the user."
+  exit 0
+fi
 
 echo "Updating and upgrading packages..."
 pkg update && pkg upgrade -y
@@ -27,5 +32,16 @@ echo "------------------------------------------------------------------"
 
 echo "Installing Debian..."
 proot-distro install debian
+
+if proot-distro list | grep -q '^debian.*installed'; then
+  echo "Debian installation verified successfully."
+else
+  echo "Debian installation failed or is not detected. Please check the logs."
+  exit 1
+fi
+
+echo "This termux session will enter proot-distro debian environment"
+sleep 5
+proot-distro login debian
 
 echo "Installation complete."
