@@ -25,7 +25,7 @@ First setup you termux with this script (i reccomend to use fresh install termux
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/termux-setup.sh)"
 ```
-If the first scripts running correctly you should be inside debian's environment, you can install graphical environment like xfce4 with this script (optional)
+If the first scripts running correctly you should be inside debian's environment. Then run this 2nd script that setup the debian
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian-setup.sh)"
 ```
