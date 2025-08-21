@@ -3,6 +3,8 @@ set -e
 
 echo "Debian setup for debian-termux by Flasher"
 
+sleep 5
+
 echo ">>> Updating and upgrading Debian packages..."
 echo "This may take a while. Please ensure you have a stable internet connection."
 apt update && apt upgrade -y
@@ -44,6 +46,8 @@ if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
 else
   echo "Skipping graphical desktop environment installation."
 fi
+
+sleep 5
 
 echo "-----------------------------------------------------------------------------------------"
 echo ">>> Debian setup is complete!."
