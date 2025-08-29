@@ -1,4 +1,5 @@
 # debian-termux
+![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white)
 
 TUTORIAL BY [@Flasherxgapple](https://github.com/Flasherxgapple)
 
