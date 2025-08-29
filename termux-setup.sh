@@ -33,13 +33,6 @@ echo "------------------------------------------------------------------"
 echo "Installing Debian..."
 proot-distro install debian
 
-if proot-distro list | grep -q '^debian.*installed'; then
-  echo "Debian installation verified successfully."
-else
-  echo "Debian installation failed or is not detected. Please check the logs."
-  exit 1
-fi
-
 echo "This termux session will enter proot-distro debian environment"
 sleep 5
 proot-distro login debian
