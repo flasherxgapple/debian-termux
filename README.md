@@ -87,7 +87,7 @@ user ALL(ALL:ALL) ALL
 ```
 
 - Then install Desktop Environment,  i use xfce4 this time
-Note: this also need stable conectivity
+Note: this also need stable conectivity (optional)
 ```
 apt install xfce4 xfce4-terminal
 ```
