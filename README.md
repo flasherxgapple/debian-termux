@@ -9,16 +9,12 @@ My debian with custom setup on termux with terminal and onboard opened
 
 # installing Termux
 
-First download termux from fdroid. or you can get one from this link
-https://f-droid.org/id/packages/com.termux/
+First download termux from fdroid. or you can get one from this [link](https://f-droid.org/id/packages/com.termux/)
 
-Or you can get the 0.119.0-beta.3 version from this link 
-https://f-droid.org/repo/com.termux_1022.apk
+Or you can get the 0.119.0-beta.3 version from this [link](https://f-droid.org/repo/com.termux_1022.apk)
 
 Then download termux x11 to display  the desktop (optional, if u want to install graphical desktop environment)
-You can find termux x11 app from its release page 
-
-https://github.com/termux/termux-x11/releases/tag/nightly
+You can find termux x11 app from its [release page](https://github.com/termux/termux-x11/releases/tag/nightly)
 
 # Script (automation)
 First setup you termux with this script (i reccomend to use fresh install termux to prevent error
