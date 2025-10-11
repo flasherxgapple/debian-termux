@@ -1,5 +1,6 @@
 # Debian-Termux Setup
 Ini adalah file readme versi Inggris jika mau versi indonesia klik [README-IND.md](./README-IND.md).
+
 ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white)
 
 ## About
