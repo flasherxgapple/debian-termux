@@ -91,6 +91,7 @@ if [[ "$lang_choice" == "2" ]]; then
   echo "Flasher :3"
   echo "============================================================"
 
+# This 'else' correctly catches when lang_choice is NOT "2" (i.e., it's "1" or defaulted to "1")
 else
   # ==========================================================
   #                   ENGLISH SETUP BLOCK
@@ -167,4 +168,4 @@ else
   echo "Flasher :3"
   echo "============================================================"
 
-fi # <-- This FINALLY closes the main IF/ELSE structure
+fi # <--- This FINALLY closes the main IF/ELSE structure
