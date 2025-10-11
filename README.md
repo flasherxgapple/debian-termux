@@ -13,6 +13,7 @@ Easily install and configure Debian GNU/Linux inside Termux (Android) using auto
 - Optional desktop environments: XFCE4 or Cinnamon
 - Firefox and Onboard keyboard included for desktop setups
 - Simple, step-by-step instructions
+- English & Indonesian script language
 
 ---
 
