@@ -95,6 +95,7 @@ if [[ "$lang_choice" == "2" ]]; then
   echo "Flasher :3"
   echo "============================================================"
 else
+
   echo ">>> Updating and upgrading Debian packages..."
   echo "This may take a while. Please ensure you have a stable internet connection."
   apt update && apt upgrade -y
