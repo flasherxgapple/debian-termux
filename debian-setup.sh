@@ -94,6 +94,8 @@ if [[ "$lang_choice" == "2" ]]; then
   echo "Lihat README untuk detail lebih lanjut."
   echo "Flasher :3"
   echo "============================================================"
+fi
+
 else
 
   echo ">>> Updating and upgrading Debian packages..."
