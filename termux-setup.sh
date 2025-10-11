@@ -93,3 +93,5 @@ else
 
   echo ">>> Setup complete! You now have Debian Installed :3"
   echo "Flasher :3"
+
+fi
