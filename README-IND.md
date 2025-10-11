@@ -67,13 +67,13 @@ Project ini memiliki 2 script untuk dijalankan
 ### 1. Script Penyiapan Termux
 Script ini Mengupdate Termux, Memasang program yg diperlukan, serta memasang Debian
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/termux-setup.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/termux-setup.sh)"
 ```
 
 ### 2. Script Instalasi Debian
 Jalankan script kedua ini didalam shell debian. script ini akan mempersiapkan debian layaknya installer desktop seperti menyiapkan user dan memasang desktop environment
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian-setup.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian-setup.sh)"
 ```
 
 ---
