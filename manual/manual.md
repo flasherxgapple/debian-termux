@@ -52,7 +52,8 @@ exit
 
 ## 6. Adding Desktop Script (If u install Desktop Environment)
 ```curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian.sh -o ~/debian.sh
-chmod +x ~/debian.sh```
+chmod +x ~/debian.sh
+```
 
 ---
 
