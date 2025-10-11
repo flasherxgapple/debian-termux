@@ -6,7 +6,8 @@ echo "Select language / Pilih bahasa:"
 echo "1) English"
 echo "2) Indonesia"
 read -p "Enter your choice [1/2]: " lang_choice
-if [[ "$lang_choice" != "1" && "$lang_choice" != "2" ]]; then
+if 
+[[ "$lang_choice" != "1" && "$lang_choice" != "2" ]]; then
   echo "Invalid choice. Defaulting to English."
   lang_choice=1
 fi
