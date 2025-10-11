@@ -1,131 +1,90 @@
-# debian-termux
+# Debian-Termux Setup
+
 ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white)
 
-TUTORIAL BY [@Flasherxgapple](https://github.com/Flasherxgapple)
+## About
+Easily install and configure Debian GNU/Linux inside Termux (Android) using automated scripts. No root required! Choose between a minimal setup or a full desktop environment (XFCE4 or Cinnamon) with Firefox and Onboard keyboard.
 
-This repository is a tutorial how to install a debian on termux with proot-distro (No Root needed)
+---
 
-![screenshot debian on termux with xfce4](/debian-termux.jpg)
-My debian with custom setup on termux with terminal and onboard opened
+## Features
+- Automated Debian installation in Termux (no root)
+- User creation and sudo setup
+- Optional desktop environments: XFCE4 or Cinnamon
+- Firefox and Onboard keyboard included for desktop setups
+- Simple, step-by-step instructions
 
-# installing Termux
+---
 
-First download termux from fdroid. or you can get one from this [link](https://f-droid.org/id/packages/com.termux/)
+## Requirements
 
-Or you can get the 0.119.0-beta.3 version from this [link](https://f-droid.org/repo/com.termux_1022.apk)
+### Minimum Requirements
+- Android 7.0 Nougat or higher
+- 2 GB RAM (minimum)
+- Stable internet connection
+- Sufficient storage (see Desktop Environment options below)
 
-Then download termux x11 to display  the desktop (optional, if u want to install graphical desktop environment)
-You can find termux x11 app from its [release page](https://github.com/termux/termux-x11/releases/tag/nightly)
+### Software Prerequisites
+- Termux (recommended from [F-Droid](https://f-droid.org/id/packages/com.termux/))
+- (Optional) Termux X11 for graphical desktop ([Termux X11 releases](https://github.com/termux/termux-x11/releases/tag/nightly))
 
-# Script (automation)
-First setup you termux with this script (i reccomend to use fresh install termux to prevent error
-```
+<details>
+<summary><strong>Desktop Environment Options & Download Size</strong></summary>
+
+- <strong>Minimal (no desktop environment):</strong>
+  - Only essential packages (sudo, nano, adduser, pulseaudio)
+  - Fastest install, smallest download (~50-100 MB)
+
+- <strong>XFCE4 Desktop Environment:</strong>
+  - XFCE4, XFCE4 Terminal, Firefox ESR, Onboard
+  - Lightweight and suitable for most devices
+  - Download size: ~400-600 MB
+  - Installed size: ~1.2-1.5 GB
+
+- <strong>Cinnamon Desktop Environment:</strong>
+  - Cinnamon, Firefox ESR, Onboard
+  - More features, heavier than XFCE4
+  - Download size: ~700-900 MB
+  - Installed size: ~2-2.5 GB
+
+<em>Actual sizes may vary depending on package updates and mirrors. Ensure you have enough storage and a stable internet connection.</em>
+</details>
+
+---
+
+## Screenshots
+![Debian on Termux with XFCE4](/debian-termux.jpg)
+*Custom Debian setup in Termux with terminal and Onboard keyboard*
+
+---
+
+
+## Automated Setup (Recommended)
+
+This project provides two scripts for a fully automated setup:
+
+### 1. Termux Setup Script
+This script updates Termux, installs required packages, and sets up Debian with proot-distro.
+```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/termux-setup.sh)"
 ```
-If the first scripts running correctly you should be inside debian's environment. Then run this 2nd script that setup the debian
-```
+
+### 2. Debian Setup Script
+Run this inside the Debian shell to finish setup, create a user, and optionally install a desktop environment.
+```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian-setup.sh)"
 ```
 
-# Manual If script didnt work
-
-# setup on termux
-
-- This step will update your termux, install x11 repository, and install needed packages
-
-```
-pkg update && pkg upgrade
-pkg install x11-repo
-pkg install termux-x11-nightly pulseaudio proot-distro git wget
-```
-
-# installing debian 
-- install debian linux with this command using proot-distro
-
-```
-pd install debian
-```
-Note: you can install other distro but in this tutorial im gonna use debian because that's the point
-
-- after debian was succesfuly installed you can login into it as root user
-```
-pd login debian
-```
-
-# setup debian
-
-- After login into debian GNU/Linux you can update it
-Note: this step take a while to be done, i reccomend using stable internet connection
-
-```
-apt update && apt upgrade
-```
-
-- Install needed packages
-
-```
-apt install sudo nano adduser pulseaudio
-```
-- Setup user
-
-```
-adduser user
-```
-Note: if you asked for password. fill it and remember it. you can leave other as blank
-
-- Root access for user
-
-```
-nano /etc/sudoers
-```
-after that paste this line on a new string
-```
-user ALL(ALL:ALL) ALL
-```
-
-- Then install Desktop Environment,  i use xfce4 this time
-Note: this also need stable conectivity (optional)
-```
-apt install xfce4 xfce4-terminal
-```
-
-- If you want to install a web browser (optional)
-
-```
-apt install firefox
-```
-
-- Install onboard an on screen virtual keyboard (optional)
-
-```
-apt install onboard
-```
-
-- Install geany a IDE you can use for coding (optional)
-
-```
-apt install geany
-```
-
-- after finishing debian setup you can exit
-
-```
-exit
-```
-
-# last step installing the script
-Clone a script from this repository which will run the debian with an xfce4 desktop environment
-```
-git clone https://github.com/flasherxgapple/debian-termux.git
-cd debian-termux
-chmod +x debian.sh
-mv debian.sh ~/
-```
-
-To run it you can use
-```
-./debian.sh
-```
+---
 
 
+## If the automation script didn't work you can try the manual method
+See [manual/manual.md](./manual/manual.md) for step-by-step manual installation instructions.
 
+---
+
+## Credits
+Tutorial by [@Flasherxgapple](https://github.com/Flasherxgapple)
+
+## License
+See [LICENSE](./LICENSE) for details.
