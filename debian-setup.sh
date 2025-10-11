@@ -6,12 +6,19 @@ echo "Select language / Pilih bahasa:"
 echo "1) English"
 echo "2) Indonesia"
 read -p "Enter your choice [1/2]: " lang_choice
+
+# Validate choice and set default to English (1)
 if [[ "$lang_choice" != "1" && "$lang_choice" != "2" ]]; then
   echo "Invalid choice. Defaulting to English."
   lang_choice=1
 fi
 
+# The main conditional structure starts here:
 if [[ "$lang_choice" == "2" ]]; then
+  # ==========================================================
+  #                 INDONESIAN SETUP BLOCK
+  # ==========================================================
+
   echo "============================================================"
   echo "Selamat datang di Script installer Debian-Termux!"
   echo "Script ini akan menginstall sistem Debian di Termux."
@@ -21,18 +28,7 @@ if [[ "$lang_choice" == "2" ]]; then
   echo "Github: github.com/flasherxgapple"
   echo "============================================================"
   sleep 3
-else
-  echo "============================================================"
-  echo "Welcome to the Debian-Termux Setup Script!"
-  echo "This script will help you set up a secure Debian environment on Termux."
-  echo "You'll be guided through user creation and can optionally install a desktop environment."
-  echo "Please make sure you have a stable internet connection throughout the process."
-  echo "Created by Flasher/Efendi"
-  echo "Github: github.com/flasherxgapple"
-  echo "============================================================"
-  sleep 3
-fi
-if [[ "$lang_choice" == "2" ]]; then
+
   echo ">>> Memperbarui dan mengupgrade Debian..."
   echo "Proses ini mungkin memakan waktu. Pastikan koneksi internet Anda stabil."
   apt update && apt upgrade -y
@@ -90,13 +86,25 @@ if [[ "$lang_choice" == "2" ]]; then
   echo "Anda dapat keluar dari shell Debian dengan mengetik 'exit'."
   echo "Untuk desktop environment, Anda mungkin perlu memulai desktop env secara manual."
   echo "Atau menggunakan script yg telah diinstall dari script pertama"
-  echo "ketik "./debian.sh" di termux untuk membuka desktop environment
+  echo "ketik "./debian.sh" di termux untuk membuka desktop environment"
   echo "Lihat README untuk detail lebih lanjut."
   echo "Flasher :3"
   echo "============================================================"
-fi
 
 else
+  # ==========================================================
+  #                   ENGLISH SETUP BLOCK
+  # ==========================================================
+
+  echo "============================================================"
+  echo "Welcome to the Debian-Termux Setup Script!"
+  echo "This script will help you set up a secure Debian environment on Termux."
+  echo "You'll be guided through user creation and can optionally install a desktop environment."
+  echo "Please make sure you have a stable internet connection throughout the process."
+  echo "Created by Flasher/Efendi"
+  echo "Github: github.com/flasherxgapple"
+  echo "============================================================"
+  sleep 3
 
   echo ">>> Updating and upgrading Debian packages..."
   echo "This may take a while. Please ensure you have a stable internet connection."
@@ -158,3 +166,5 @@ else
   echo "Refer to the README for more details."
   echo "Flasher :3"
   echo "============================================================"
+
+fi # <-- This FINALLY closes the main IF/ELSE structure
