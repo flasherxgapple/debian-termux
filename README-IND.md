@@ -4,7 +4,8 @@ This is Indonesian readme file. if u want English click here [README.md](./READM
 ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white)
 
 ## Tentang Project Ini
-Installer Debian GNU/Linux untuk Termux (Android) dengan script. Tanpa Root! Pilih antara Debian minimal atau dengan desktop environment (XFCE4 atau Cinnamon) dengan firefox dan keyboard onboard
+Installer Debian GNU/Linux untuk Termux (Android) dengan script. Tanpa Root! Pilih antara Debian minimal atau dengan desktop environment (XFCE4 atau Cinnamon) dengan firefox dan keyboard onboard.
+
 ---
 
 ## Fitur
