@@ -68,13 +68,13 @@ This project provides two scripts for a fully automated setup:
 ### 1. Termux Setup Script
 This script updates Termux, installs required packages, and sets up Debian with proot-distro.
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/termux-setup.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/termux-setup.sh)"
 ```
 
 ### 2. Debian Setup Script
 Run this inside the Debian shell to finish setup, create a user, and optionally install a desktop environment.
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian-setup.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian-setup.sh)"
 ```
 
 ---
