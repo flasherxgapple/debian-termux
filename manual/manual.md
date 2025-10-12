@@ -40,9 +40,17 @@ chmod 0440 /etc/sudoers.d/user
   ```sh
   apt install xfce4 xfce4-terminal firefox-esr onboard
   ```
-- Cinnamon:
+- LXDE:
   ```sh
-  apt install cinnamon firefox-esr onboard
+  apt install lxde firefox-esr onboard
+  ```
+- LXQt:
+  ```sh
+  apt install lxqt firefox-esr onboard
+  ```
+- MATE:
+  ```sh
+  apt install mate-desktop-environment firefox-esr onboard
   ```
 
 ## 5. Exiting Debian
@@ -50,10 +58,42 @@ chmod 0440 /etc/sudoers.d/user
 exit
 ```
 
-## 6. Adding Desktop Script (If u install Desktop Environment)
+## 6. Adding Desktop Launcher Script (If you installed a Desktop Environment)
+Choose your preferred language for the launcher:
+
+- **English version:**
+  ```sh
+  curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian-en.sh -o ~/debian.sh
+  chmod +x ~/debian.sh
+  ```
+- **Indonesian version:**
+  ```sh
+  curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian-ind.sh -o ~/debian.sh
+  chmod +x ~/debian.sh
+  ```
+
+### Using Launcher Script Flags
+
+You can use flags to control the launcher script:
+
+**Usage:**
+```sh
+./debian.sh [options]
 ```
-curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian.sh -o ~/debian.sh
-chmod +x ~/debian.sh
+
+**Options:**
+- `-h`, `--help`           Show help message and exit (English) / Tampilkan pesan bantuan (Indonesian)
+- `-d N`, `--default N`    Set default desktop environment (N):
+    - 1 = XFCE4
+    - 2 = LXDE
+    - 3 = LXQt
+    - 4 = MATE
+    - 0 = Minimal (no desktop)
+
+**Examples:**
+```sh
+./debian.sh -d 1     # Launch with XFCE4 as default
+./debian.sh -h       # Show help message
 ```
 
 ---

@@ -4,7 +4,7 @@ Ini adalah file readme versi Inggris jika mau versi indonesia klik [README-IND.m
 ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white)
 
 ## About
-Easily install and configure Debian GNU/Linux inside Termux (Android) using automated scripts. No root required! Choose between a minimal setup or a full desktop environment (XFCE4 or Cinnamon) with Firefox and Onboard keyboard.
+Easily install and configure Debian GNU/Linux inside Termux (Android) using automated scripts. No root required! Choose between a minimal setup or a full desktop environment (XFCE4,MATE,LXQT,LXDE) with Firefox and Onboard keyboard.
 
 ---
 
@@ -15,6 +15,7 @@ Easily install and configure Debian GNU/Linux inside Termux (Android) using auto
 - Firefox and Onboard keyboard included for desktop setups
 - Simple, step-by-step instructions
 - English & Indonesian script language
+- Failsafe Feature
 
 ---
 
@@ -43,11 +44,23 @@ Easily install and configure Debian GNU/Linux inside Termux (Android) using auto
   - Download size: ~400-600 MB
   - Installed size: ~1.2-1.5 GB
 
-- <strong>Cinnamon Desktop Environment:</strong>
-  - Cinnamon, Firefox ESR, Onboard
-  - More features, heavier than XFCE4
-  - Download size: ~700-900 MB
-  - Installed size: ~2-2.5 GB
+- <strong>LXDE Desktop Environment:</strong>
+  - LXDE, Firefox ESR, Onboard
+  - Lightweight, classic interface
+  - Download size: ~300-500 MB
+  - Installed size: ~1-1.2 GB
+
+- <strong>LXQt Desktop Environment:</strong>
+  - LXQt, Firefox ESR, Onboard
+  - Lightweight, modern interface
+  - Download size: ~350-550 MB
+  - Installed size: ~1-1.3 GB
+
+- <strong>MATE Desktop Environment:</strong>
+  - MATE, Firefox ESR, Onboard
+  - Classic, stable interface
+  - Download size: ~500-700 MB
+  - Installed size: ~1.2-1.7 GB
 
 <em>Actual sizes may vary depending on package updates and mirrors. Ensure you have enough storage and a stable internet connection.</em>
 </details>
@@ -63,6 +76,8 @@ Easily install and configure Debian GNU/Linux inside Termux (Android) using auto
 
 ## Automated Setup (Recommended)
 
+---
+
 This project provides two scripts for a fully automated setup:
 
 ### 1. Termux Setup Script
@@ -75,6 +90,32 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-te
 Run this inside the Debian shell to finish setup, create a user, and optionally install a desktop environment.
 ```sh
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian-setup.sh)"
+```
+
+---
+
+## Desktop Script Flags
+
+The desktop launcher script (`debian.sh`) supports command-line flags for easier usage:
+
+**Usage:**
+```sh
+./debian.sh [options]
+```
+
+**Options:**
+- `-h`, `--help`           Show help message and exit
+- `-d N`, `--default N`    Set default desktop environment (N):
+    - 1 = XFCE4
+    - 2 = LXDE
+    - 3 = LXQt
+    - 4 = MATE
+    - 0 = Minimal (no desktop)
+
+**Examples:**
+```sh
+./debian.sh -d 1     # Launch with XFCE4 as default
+./debian.sh -h       # Show help message
 ```
 
 ---

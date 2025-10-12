@@ -1,7 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-#ORIGINAL SOURCE FOR DESKTOP SCRIPTS
-
 kill -9 $(pgrep -f "termux.x11") 2>/dev/null
 
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
@@ -14,13 +12,45 @@ sleep 3
 am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity > /dev/null 2>&1
 sleep 1
 
-# Desktop Environment Launcher
-
 DE_LIST=("minimal" "xfce4" "lxde" "lxqt" "mate")
 DE_CMDS=("none" "startxfce4" "startlxde" "startlxqt" "mate-session")
 DE_NAMES=("Minimal" "XFCE4" "LXDE" "LXQt" "MATE")
 INSTALLED=()
 DEFAULT_DE=0
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -h|--help)
+      echo "Usage: ./debian.sh [options]"
+      echo ""
+      echo "Options:"
+      echo "  -h, --help           Show this help message and exit"
+      echo "  -d N, --default N    Set default desktop environment (N):"
+      echo "                       1 = XFCE4"
+      echo "                       2 = LXDE"
+      echo "                       3 = LXQt"
+      echo "                       4 = MATE"
+      echo "                       0 = Minimal (no desktop)"
+      echo ""
+      echo "Examples:"
+      echo "  ./debian.sh -d 1     # Launch with XFCE4 as default"
+      echo "  ./debian.sh -h       # Show this help message"
+      exit 0
+      ;;
+    -d|--default)
+      if [[ -n "$2" && "$2" =~ ^[0-4]$ ]]; then
+        DEFAULT_DE=$2
+        shift
+      else
+        echo "Error: -d/--default requires a number 0-4."
+        exit 1
+      fi
+      ;;
+    *)
+      ;;
+  esac
+  shift
+done
 
 for i in "${!DE_LIST[@]}"; do
   if [[ "${DE_LIST[$i]}" == "minimal" ]]; then
@@ -30,17 +60,14 @@ for i in "${!DE_LIST[@]}"; do
   else
     INSTALLED[$i]=""
   fi
-  # Set first installed DE as default (if not minimal)
   if [[ $i -ne 0 && "${INSTALLED[$i]}" == "(installed)" && $DEFAULT_DE -eq 0 ]]; then
     DEFAULT_DE=$i
   fi
-  # Minimal is always default if nothing else
 done
 
 echo "Select your desktop environment to launch:"
 for i in "${!DE_LIST[@]}"; do
   echo "$((i+1))) ${DE_NAMES[$i]} ${INSTALLED[$i]}"
-  # Example: 2) XFCE4 (installed)
 done
 if [[ $DEFAULT_DE -eq 0 ]]; then
   echo "(Default: Minimal)"

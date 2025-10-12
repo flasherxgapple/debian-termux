@@ -35,9 +35,20 @@ if [[ "$lang_choice" == "2" ]]; then
   echo ">>> Memasang program yg dibutuhkan: Termux X11, PulseAudio, Proot-Distro, Git, dan Wget..."
   pkg install termux-x11-nightly pulseaudio proot-distro git wget -y
 
-  echo ">>> Mengunduh script desktop (debian.sh) dari repositori..."
-  curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian.sh -o ~/debian.sh
+echo "Pilih bahasa peluncur desktop:"
+echo "1) English"
+echo "2) Indonesia"
+read -p "Masukkan pilihan Anda [1/2]: " launcher_lang
+if [[ "$launcher_lang" == "2" ]]; then
+  echo ">>> Mengunduh peluncur desktop Indonesia (debian-ind.sh) dari repositori..."
+  curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian-ind.sh -o ~/debian.sh
   chmod +x ~/debian.sh
+else
+  echo ">>> Downloading the English desktop launcher (debian-en.sh) from the repository..."
+  curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian-en.sh -o ~/debian.sh
+  chmod +x ~/debian.sh
+fi
+
 
   echo "------------------------------------------------------------------"
   echo "PENTING: Setelah script penyiapan ini selesai, jalankan script installer kedua di dalam shell Debian."
@@ -76,9 +87,6 @@ else
   echo ">>> Installing required packages: Termux X11, PulseAudio, Proot-Distro, Git, and Wget..."
   pkg install termux-x11-nightly pulseaudio proot-distro git wget -y
 
-  echo ">>> Downloading the desktop launch script (debian.sh) from the repository..."
-  curl -fsSL https://raw.githubusercontent.com/flasherxgapple/debian-termux/master/debian.sh -o ~/debian.sh
-  chmod +x ~/debian.sh
 
   echo "------------------------------------------------------------------"
   echo "IMPORTANT: After this script completes, you must run the second setup script inside the Debian shell."
