@@ -1,5 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+echo "Memeriksa Desktop Environment yg terinstall"
+echo "Harap tunggu......"
+
 DE_LIST=("minimal" "xfce4" "lxde" "lxqt" "mate")
 DE_CMDS=("none" "startxfce4" "startlxde" "startlxqt" "mate-session")
 DE_NAMES=("Minimal" "XFCE4" "LXDE" "LXQt" "MATE")
