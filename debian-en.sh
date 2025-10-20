@@ -1,5 +1,11 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+echo "----------------------------------------"
+echo "Debian termux desktop launcher"
+echo "by flasher"
+echo "https://github.com/flasherxgapple"
+echo "----------------------------------------"
+sleep 3
 echo "Checking installed Desktop Environment"
 echo "please wait...."
 
