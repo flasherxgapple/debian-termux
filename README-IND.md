@@ -8,6 +8,15 @@ Installer Debian GNU/Linux untuk Termux (Android) dengan script. Tanpa Root! Pil
 
 ---
 
+## Screenshots
+![Debian on Termux with XFCE4](/debian-termux.jpg)
+*Debian dengan desktop environment XFCE4 dan keyboard onboard*
+
+![Debian on Termux with MATE](/debian-mate.jpg)
+*Debian dengan desktop environment MATE berjalan dari termux:float*
+
+---
+
 ## Fitur
 - Instalasi otomatis Debian di Termux (Tanpa root)
 - Pembuatan user dan penyiapan Superuser
@@ -64,12 +73,6 @@ Installer Debian GNU/Linux untuk Termux (Android) dengan script. Tanpa Root! Pil
 
 <em>Ukuran sebenarnya tergantung repository dan mirror(server) yang digunakan. Pastikan untuk memiliki penyimpana yang cukup dan kecepatan internet yang stabil.</em>
 </details>
-
----
-
-## Screenshots
-![Debian on Termux with XFCE4](/debian-termux.jpg)
-*Debian di termux dengan xfce4 dan firefox serta onboard*
 
 ---
 
