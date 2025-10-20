@@ -8,6 +8,15 @@ Easily install and configure Debian GNU/Linux inside Termux (Android) using auto
 
 ---
 
+## Screenshots
+![Debian on Termux with XFCE4](/debian-termux.jpg)
+*Custom Debian setup in Termux with terminal and Onboard keyboard*
+
+![Debian on Termux with MATE](/debian-mate.jpg)
+*Debian with MATE desktop environment from termux:float*
+
+---
+
 ## Features
 - Automated Debian installation in Termux (no root)
 - User creation and sudo setup
@@ -64,12 +73,6 @@ Easily install and configure Debian GNU/Linux inside Termux (Android) using auto
 
 <em>Actual sizes may vary depending on package updates and mirrors. Ensure you have enough storage and a stable internet connection.</em>
 </details>
-
----
-
-## Screenshots
-![Debian on Termux with XFCE4](/debian-termux.jpg)
-*Custom Debian setup in Termux with terminal and Onboard keyboard*
 
 ---
 
