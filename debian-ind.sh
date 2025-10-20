@@ -1,5 +1,11 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+
+echo "----------------------------------------"
+echo "Debian termux desktop launcher"
+echo "by flasher"
+echo "https://github.com/flasherxgapple"
+echo "----------------------------------------"
 echo "Memeriksa Desktop Environment yg terinstall"
 echo "Harap tunggu......"
 
